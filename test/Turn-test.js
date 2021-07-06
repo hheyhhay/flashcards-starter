@@ -37,7 +37,6 @@ describe('Turn', function() {
 
   it('should be able to evaluate guess when wrong', function(){
     turn.evaluateGuess();
-    //can chang ethe guess to be turn.guess = 'pug'
     expect(turn.evaluateGuess()).to.equal(false);
   });
 
@@ -58,7 +57,6 @@ describe('Turn', function() {
     expect(turn.giveFeedback()).to.equal('correct!')
   })
 
-// should I do a describe block for if the answer is correct? Or... any sad cases?
 
 
 
