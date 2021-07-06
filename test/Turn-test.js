@@ -38,6 +38,27 @@ describe('Turn', function() {
   it('should be able to evaluate guess when wrong', function(){
     turn.evaluateGuess();
     expect(turn.evaluateGuess()).to.equal(false);
+<<<<<<< HEAD
+  });
+
+  it('should be able to evaluate guess when correct', function(){
+    turn.guess = 'sea otter';
+    turn.evaluateGuess();
+    expect(turn.evaluateGuess()).to.equal(true);
+  });
+
+  it('should be able to give feedback when wrong', function() {
+    turn.giveFeedback();
+    expect(turn.giveFeedback()).to.equal(`incorrect!`);
+  });
+
+  it('should be able to give feedback when correct', function() {
+    turn.guess = 'sea otter';
+    turn.giveFeedback();
+    expect(turn.giveFeedback()).to.equal('correct!')
+  })
+
+=======
   })
 
   it('should be able to give feedback', function() {
@@ -46,6 +67,7 @@ describe('Turn', function() {
   })
 
 // should I do a describe block for if the answer is correct? Or... any sad cases?
+>>>>>>> 13090eb0fb167c93b5225d9b9248ca1500598474
 
 
 
