@@ -3,16 +3,17 @@ class Turn{
     this.guess = guess;
     this.card = card;
   }
-  returnGuess(){
+  returnGuess() {
     return this.guess;
   };
 
-  returnCard(){
+
+  returnCard() {
     return this.card;
   };
 
-  evaluateGuess(){
-    if(this.guess === this.card.correctAnswer){
+  evaluateGuess() {
+    if(this.guess === this.card.correctAnswer) {
       return true
     } else {
         return false
@@ -20,7 +21,7 @@ class Turn{
 
   };
 
-  giveFeedback(){
+  giveFeedback() {
     if (this.evaluateGuess()){
       return `correct!`
     } else {

@@ -7,6 +7,7 @@ const Card = require('../src/Card');
 describe('Turn', function() {
   let turn;
   let card;
+
   beforeEach(() => {
     card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
     turn = new Turn('pug', card);
@@ -23,7 +24,7 @@ describe('Turn', function() {
 
   it('should take a card object', function() {
     expect(turn.card).to.deep.equal(card);
-    })
+  }) // combine top three
 
   it('should have a method that returns the guess', function() {
     turn.returnGuess();
@@ -32,7 +33,13 @@ describe('Turn', function() {
 
   it('should have a method that returns the card', function() {
     turn.returnCard();
-    expect(turn.returnCard()).to.equal(card)
+    console.log(card)
+    expect(turn.returnCard()).to.deep.equal({
+  id: 1,
+  question: "What is Robbie's favorite animal",
+  answers: [ 'sea otter', 'pug', 'capybara' ],
+  correctAnswer: 'sea otter'
+}) // makeSure testing data itself
   } );
 
   it('should be able to evaluate guess when wrong', function(){
@@ -59,10 +66,10 @@ describe('Turn', function() {
 
 
 
-  it('should be able to give feedback', function() {
-    turn.giveFeedback();
-    expect(turn.giveFeedback()).to.equal(`incorrect!`);
-  })
+  // it('should be able to give feedback', function() {
+  //   turn.giveFeedback();
+  //   expect(turn.giveFeedback()).to.equal(`incorrect!`);
+  // })
     })
 
 // should I do a describe block for if the answer is correct? Or... any sad cases?
