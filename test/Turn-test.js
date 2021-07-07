@@ -34,12 +34,7 @@ describe('Turn', function() {
   it('should have a method that returns the card', function() {
     turn.returnCard();
     console.log(card)
-    expect(turn.returnCard()).to.deep.equal({
-  id: 1,
-  question: "What is Robbie's favorite animal",
-  answers: [ 'sea otter', 'pug', 'capybara' ],
-  correctAnswer: 'sea otter'
-}) // makeSure testing data itself
+    expect(turn.returnCard()).to.deep.equal(card) // makeSure testing data itself
   } );
 
   it('should be able to evaluate guess when wrong', function(){
