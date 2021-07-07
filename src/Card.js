@@ -1,5 +1,5 @@
-class Card{
-  constructor(id, question, possibleAnswers, correctAnswer){
+class Card {
+  constructor(id, question, possibleAnswers, correctAnswer) {
     this.id = id;
     this.question = question;
     this.answers = possibleAnswers;
