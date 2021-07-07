@@ -14,17 +14,9 @@ describe('Turn', function() {
 
   })
 
-  it('should be a function', function() {
-    expect(Turn).to.be.a('function')
-  });
-
-  it('should take a guess as an argument', function() {
+  it('should take a guess and a card object as arguments', function() {
     expect(turn.guess).to.deep.equal('pug');
   })
-
-  it('should take a card object', function() {
-    expect(turn.card).to.deep.equal(card);
-  }) // combine top three
 
   it('should have a method that returns the guess', function() {
     turn.returnGuess();
@@ -33,8 +25,7 @@ describe('Turn', function() {
 
   it('should have a method that returns the card', function() {
     turn.returnCard();
-    console.log(card)
-    expect(turn.returnCard()).to.deep.equal(card) // makeSure testing data itself
+    expect(turn.returnCard()).to.deep.equal(card);
   } );
 
   it('should be able to evaluate guess when wrong', function(){
@@ -59,12 +50,4 @@ describe('Turn', function() {
     expect(turn.giveFeedback()).to.equal('correct!')
   })
 
-
-
-  // it('should be able to give feedback', function() {
-  //   turn.giveFeedback();
-  //   expect(turn.giveFeedback()).to.equal(`incorrect!`);
-  // })
     })
-
-// should I do a describe block for if the answer is correct? Or... any sad cases?
