@@ -20,12 +20,10 @@ beforeEach(() => {
   card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
 
   deck = new Deck([card1, card2, card3]);
-  turn = new Turn('sea otter', card1);  // ask if should be instantiated here or else
-// add turn
+  turn = new Turn('sea otter', card1);
+
   round = new Round(deck);
-  // console.log(round, 'insside before each')
-  // console.log(deck, 'inside')
-  //   console.log(deck.data[0], 'INSIDE')
+
 } )
 
   it('should be a function', function() {
@@ -33,27 +31,17 @@ beforeEach(() => {
   });
 
   it('should take in a deck instance as an arguement', function() {
-    console.log(round.deck);
-    console.log(deck);
     expect(round.deck).to.equal(deck)
   });
 
   it('should keep track of current card', function(){
-    // console.log(deck.data[0]);
-    // console.log(round.currentCard) // fix!
-    expect(round.currentCard).to.deep.equal({
-  id: 1,
-  question: "What is Robbie's favorite animal",
-  answers: [ 'sea otter', 'pug', 'capybara' ],
-  correctAnswer: 'sea otter'
-}) // could also LITERALLY put in object
+    expect(round.currentCard).to.deep.equal(deck.data[0]);
   });
 
   it('should be able to count turns', function(){
     expect(round.turns).to.deep.equal(0);
-    // expect(round.turns).to.equal(0);
-
   })
+
   it('should return the current card played', function(){
     round.returnCurrentCard();
     expect(round.returnCurrentCard()).to.deep.equal(round.currentCard)
