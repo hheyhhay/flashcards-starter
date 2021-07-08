@@ -81,4 +81,12 @@ beforeEach(() => {
     round.takeTurn('pug');
     expect(round.incorrectGuesses[0]).to.deep.equal('pug')
   });
+
+  it('should be able to calculate and return percentages of correct guesses', function() {
+    round.takeTurn('sea otter');
+    round.takeTurn('spleen');
+    round.takeTurn('playing with bubble wrap');
+    round.calculatePercentCorrect();
+    expect(round.calculatePercentCorrect()).to.deep.equal(`67%`)
+  })
 })

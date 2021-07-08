@@ -30,11 +30,16 @@ class Round{
 
   };
 
+  calculatePercentCorrect(){
+    let percentage = Math.round(((this.turns - this.incorrectGuesses.length) / this.turns)*100);
+    // let percentage = ( 3 - 1 ) / 3;
+  console.log(this.turns, this.incorrectGuesses.length)
+    return `${percentage}%`;
+
+  }
   updateTurn(){
     this.turns++;
     this.currentCard = this.deck.data[this.turns]
-
-  }
-
+  };
 }
 module.exports = Round;
