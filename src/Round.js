@@ -47,5 +47,6 @@ class Round{
     if (this.turns === this.deck.data.length){
       return `** Round over! ** You answered ${this.percentCorrect}% of the questions correctly!`
   }
+  }
 }
 module.exports = Round;
