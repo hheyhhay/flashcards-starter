@@ -1,11 +1,11 @@
-class Deck{
-  constructor(dataSet){
+class Deck {
+  constructor(dataSet) {
     this.data = dataSet;
 
   }
-  countCards(){
+  countCards() {
     return this.data.length;
   }
-};
+}
 
 module.exports = Deck;
