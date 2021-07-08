@@ -5,6 +5,7 @@ class Round{
     this.deck = deck;
     this.turns = 0;
     this.currentCard = this.deck.data[0];
+    this.incorrectGuesses = [];
 
 
   }
@@ -19,8 +20,9 @@ class Round{
       this.updateTurn();
       return `Correct!`;
     } else {
+      this.incorrectGuesses.push(turn.guess);
       this.updateTurn()
-      return `Incorrect`
+      return `Incorrect!`
     }
 
     this.currentCard = this.deck.data[this.turns]

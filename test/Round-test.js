@@ -69,7 +69,16 @@ beforeEach(() => {
     expect(round.returnCurrentCard()).to.deep.equal(round.currentCard)
   })
 
-  it('should be able to evaluate guess', function() {
-    expect(round.takeTurn('sea otter')).to.deep.equal(`Correct!`)
+  it('should be able to evaluate correct guess', function() {
+    expect(round.takeTurn('sea otter')).to.deep.equal(`Correct!`);
   })
+
+  it('should be able to evaluate incorrect guess', function() {
+    expect(round.takeTurn('pug')).to.deep.equal(`Incorrect!`);
+  })
+
+  it('should be able to store incorrect guesses', function() {
+    round.takeTurn('pug');
+    expect(round.incorrectGuesses[0]).to.deep.equal('pug')
+  });
 })
