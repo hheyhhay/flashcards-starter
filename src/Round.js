@@ -6,6 +6,7 @@ class Round{
     this.turns = 0;
     this.currentCard = this.deck.data[0];
     this.incorrectGuesses = [];
+    this.percentCorrect = 0;
 
 
   }
@@ -31,15 +32,20 @@ class Round{
   };
 
   calculatePercentCorrect(){
-    let percentage = Math.round(((this.turns - this.incorrectGuesses.length) / this.turns)*100);
+    this.percentCorrect = Math.round(((this.turns - this.incorrectGuesses.length) / this.turns)*100);
     // let percentage = ( 3 - 1 ) / 3;
-  console.log(this.turns, this.incorrectGuesses.length)
-    return `${percentage}%`;
 
-  }
+    return `${this.percentCorrect}%`;
+  };
   updateTurn(){
     this.turns++;
     this.currentCard = this.deck.data[this.turns]
   };
+
+  endRound(){
+    this.calculatePercentCorrect()
+    if (this.turns === this.deck.data.length){
+      return `** Round over! ** You answered ${this.percentCorrect}% of the questions correctly!`
+  }
 }
 module.exports = Round;

@@ -89,4 +89,19 @@ beforeEach(() => {
     round.calculatePercentCorrect();
     expect(round.calculatePercentCorrect()).to.deep.equal(`67%`)
   })
+
+  it('should be able to calculate and return percentage of another set of guesses', function(){
+    round.takeTurn('sea otter');
+    round.takeTurn('gallbladder');
+    round.takeTurn('playing with bubble wrap');
+    round.calculatePercentCorrect();
+    expect(round.calculatePercentCorrect()).to.deep.equal(`100%`)
+  })
+
+  it('should be able to end round when all cards are used', function() {
+    round.takeTurn('sea otter');
+    round.takeTurn('gallbladder');
+    round.takeTurn('playing with bubble wrap');
+    expect(round.endRound()).to.deep.equal(`** Round over! ** You answered 100% of the questions correctly!`)
+  })
 })
