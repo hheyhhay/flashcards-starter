@@ -24,7 +24,6 @@ class Round {
       this.updateTurn()
       return `Incorrect!`
     }
-    this.endRound();
   }
 
   calculatePercentCorrect() {
@@ -43,7 +42,8 @@ class Round {
     if (this.turns === this.deck.data.length) {
       console.log(`** Round over! ** You answered ${this.percentCorrect}% of the questions correctly!`)
       return `** Round over! ** You answered ${this.percentCorrect}% of the questions correctly!`
-      }
+    }
   }
-};
+}
+
 module.exports = Round;
