@@ -1,6 +1,6 @@
 class Deck {
-  constructor(dataSet) {
-    this.data = dataSet;
+  constructor(cards) {
+    this.data = cards;
 
   }
   countCards() {
