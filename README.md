@@ -1,79 +1,52 @@
-# FlashCards Starter Kit
+# Flashcard Fun!
+Mod 2: Solo Project
+
+
+## Table of Contents
+  - [Abstract](#abstract)
+  - [Technologies](#technologies)
+  - [Code Architecture](#code-architecture)
+  - [Illustrations](#illustrations)
+  - [Install + Setup](#set-up)
+  - [Contributors](#contributors)
+  - [Project Specs](#project-specs)
 
 ## Abstract
+  This project uses the terminal to play a guessing game using flashcards. Once the game is initiated the user can chose between the three possible answers for the correct one. The game prints out if the the guess is correct or incorrect. Once the player has run through the deck of cards, the console will print the game is over and the percentage of guess correct.
 
-sentence or 
-
-## Setup
-
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
-
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
-
-Once you have cloned the repo, change into the directory and install the library dependencies. Run:
-
-```bash
-npm install
-```
-
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
-
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal:
-
-```bash
-Node server running on port 3000
-```
-
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
+## Technologies
+  - Javascript
+  - eslint
+  - node
+  - Atom
 
 
-## Where to Add Your Code
+## Code Architecture
+  - Each class file has a test file to ensure the code is outputting the desired results.
+  - The Card file builds a the card class.
+  - The Deck file builds the Deck class, which takes in the parameter of an array of instanciated Cards.
+  - The Round file builds the Round class, which takes the parameter of the instanciated Deck. It allows the game to take turns and update the next card to be played. It records the amount of incorrect guesses and the turns taken and outputs the percentage of correct guesses.
+  - The Game file builds the Game class, taking in the parameter of questions. The Game file starts the game and instantiates the card, deck and round based off of the questions used in the argument. This file used in the index.js file to allow the game to be played through the console. The method starts(), is invoked in the index.js file.
 
-### JavaScript
+## Illustrations
 
-**Create all of your feature code files in the `src` directory.**
+![flashcards]() 
+Gif of the game in action.
 
-We will be using the `module.exports` and `require` syntax to share code across files.
 
-## How to View Your Code in Action
+## Install + Setup
 
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
+1. Fork this repo  
+2. Clone the repo to your local machine
+3. CD into the directory
+4. View the play the game by running node index.js on the Terminal
 
-```bash
-node index.js
-```
 
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
 
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
+## Contributors
+  - [Hayley Dixon](https://github.com/hheyhhay)
 
----
 
-## Test Files Organization
 
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
-
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
-
-## Running Your Tests
-
-Run your test suite using the command:
-
-```bash
-npm test
-```
-
-The test results will output to the terminal.
-
----
-
-## Linting Your Code
-
-Run the command in your terminal `npm run lint` to run the linter on your JavaScript code. There will be errors and warnings right from the start in this starter kit - the linter is still running successfully.
-
-Your linter will look at the JavaScript files you have within the `src` directory and the `test` directory.
-
----
+## Project Specs
+  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/flash-cards.html)
