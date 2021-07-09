@@ -18,27 +18,14 @@ class Game {
     let cards = this.questions.map(element => card = new Card(element.id, element.question, element.answers, element.correctAnswer));
     let deck = new Deck(cards);
     let round = new Round(deck);
+    this.printMessage(deck, round);
+    this.printQuestion(round);
 
 
-
-    // let cards = this.questions.map(element => card = new Card(element.id, element.question, element.answers, element.correctAnswer));
-    // console.log('cards!', cards)
-    //
-    //
-    //
-    // console.log(this.questions[0].question)
-    // let card = new Card(this.questions.id, this.questions.question, this.questions.possibleAnswers, this.questions.correctAnswer );
-
-    // console.log(card)
-    // cards.push(card);
-    // console.log(data.prototypeData)
-    return true
+    return
   }
 
-  instantiateCard(){
-    console.log(cards)
-    return cards;
-  }
+
 
   printMessage(deck, round) {
       console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.

@@ -11,11 +11,7 @@ const prototypeQuestions = data.prototypeData;
 const util = require('../src/util');
 
 describe('Game', function() {
-  let card1;
-  let card2;
-  let card3;
-  let deck;
-  let round;
+
   let game;
 
 
@@ -33,12 +29,6 @@ beforeEach(() => {
     game.start();
     expect(game.currentRound).to.equal(1);
   });
-
-  it('should be able to create Cards at start', function() {
-    game.start();
-
-    expect(game.start()).to.equal(true);
-  })
 
   it('should be able to print message', function() {
     game.printMessage(deck, round);
