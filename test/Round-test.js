@@ -45,15 +45,8 @@ beforeEach(() => {
     expect(round.returnCurrentCard()).to.deep.equal(round.currentCard)
   })
 
-  // it ('should instanciate a turn from guess', function() {
-  //   round.takeTurn('sea otter');
-  //   console.log('outside', turn);
-  //   expect(turn).to.deep.equal({guess: 'sea otter', card: round.currentCard})
-  // })
-
   it('should be able to update turns count', function() {
     round.takeTurn('sea otter'); // turn.guess;
-
     expect(round.turns).to.deep.equal(1);
   })
 
