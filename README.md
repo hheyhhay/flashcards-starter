@@ -1,4 +1,4 @@
-![flashCard](https://user-images.githubusercontent.com/78764587/125016090-fd22d280-e02d-11eb-8f45-a566e0821e60.gif)
+
 # Flashcard Fun!
 Mod 2: Solo Project
 
@@ -31,7 +31,7 @@ Mod 2: Solo Project
 
 ## Illustrations
 
-![flashcards]() 
+![flashCard](https://user-images.githubusercontent.com/78764587/125016090-fd22d280-e02d-11eb-8f45-a566e0821e60.gif)
 Gif of the game in action.
 
 
