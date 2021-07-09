@@ -6,7 +6,5 @@ class Card {
     this.correctAnswer = correctAnswer;
   }
 }
+
 module.exports = Card;
-
-
-// should i not have the parameters the same as the property names?
